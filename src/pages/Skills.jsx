@@ -4,7 +4,7 @@ import { FaUserGear } from 'react-icons/fa6';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ProgressBars from '../components/progressBars';
+import ProgressBars from '../components/ProgressBars.jsx';
 import InfiniteLogos from '../components/InfiniteLogos';
 gsap.registerPlugin(ScrollTrigger);
 
