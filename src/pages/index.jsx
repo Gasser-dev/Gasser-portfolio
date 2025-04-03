@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router';
-import About from './about';
+import About from './About';
 function Pages() {
   return (
       <Routes>

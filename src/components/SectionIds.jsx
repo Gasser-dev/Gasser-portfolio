@@ -1,2 +1,2 @@
 // Ids لزوم الNav
-export const sectionIds = ["about", "skills", "projects"]
+export const sectionIds = ["about", "skills", "projects", "contactMe"]

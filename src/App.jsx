@@ -1,4 +1,4 @@
-import About from './pages/about'
+import About from './pages/About'
 import Skills from './pages/Skills'
 import gsap from 'gsap'; // <-- import GSAP
 import { useGSAP } from '@gsap/react'; // <-- import the hook from our React package
@@ -7,7 +7,10 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Pages from './pages';
 import Projects from './pages/Projects';
-
+import Contact from './pages/Contact';
+import Footer from './layout/Footer';
+import SmallNav from './components/SmallNav';
+import Header from './layout/Header';
 gsap.registerPlugin(useGSAP);
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -28,6 +31,8 @@ function App() {
       <About />
       <Skills />
       <Projects/>
+      <Contact/>
+      <Footer/>
       </>
     }
     </>

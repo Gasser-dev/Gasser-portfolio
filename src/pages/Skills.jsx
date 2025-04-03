@@ -1,16 +1,11 @@
 import React from 'react';
 import { FaUserGear } from 'react-icons/fa6';
-import tailwind from '../assets/imgs/tailwind.png';
-import bootstrap from '../assets/imgs/bootstrap.png';
-import react from '../assets/imgs/react.png';
-import javascript from '../assets/imgs/javascript.png';
-import css from '../assets/imgs/css.webp';
-import html from '../assets/imgs/html.webp';
+
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ProgressBars from '../components/progressBars';
-
+import InfiniteLogos from '../components/InfiniteLogos';
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
@@ -43,7 +38,7 @@ const Skills = () => {
         duration: 3,
         scrollTrigger:{
           trigger :".progress",
-          start: "top 80%",
+          start: "top 110%",
           toggleActions: "play none none reverse"
         }
       }
@@ -60,14 +55,7 @@ const Skills = () => {
         </div>
 
         {/* Skill Icons */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center p-4">
-          <img src={html} alt="HTML" width={150} className="icon select-none" />
-          <img src={css} alt="CSS" width={150} className="icon select-none" />
-          <img src={javascript} alt="JavaScript" width={150} className="icon select-none" />
-          <img src={bootstrap} alt="Bootstrap" width={150} className="icon select-none" />
-          <img src={tailwind} alt="Tailwind CSS" width={150} className="icon select-none" />
-          <img src={react} alt="React" width={150} className="icon select-none" />
-        </div>
+        <InfiniteLogos/>
         {/* Skills bars */}
         <ProgressBars ColorClass="bg-red-600" data-percentage={95} percentage={95} labelText="HTML" />
         <ProgressBars ColorClass="bg-blue-500" data-percentage={85} percentage={85} labelText="CSS" />

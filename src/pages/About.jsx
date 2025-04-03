@@ -4,7 +4,7 @@ import '@/index.css'
 
 const About = () => {
     return (
-        <section id="about" className="min-h-screen bg-gradient-236 from-white from-8.54 z-10 to-[#7D0000] relative to-70.28 overflow-x-hidden no-scrollbar max-h-[400px] overflow-y-auto md:overflow-y-hidden
+        <section id="about" className="min-h-screen bg-gradient-236 from-white from-8.54 z-10 to-[#7D0000] relative to-70.28 overflow-x-hidden no-scrollbar max-h-[400px] overflow-y-auto lg:overflow-y-hidden
   [&::-webkit-scrollbar]:w-2
   [&::-webkit-scrollbar-track]:rounded-full
   [&::-webkit-scrollbar-track]:bg-gray-100
@@ -16,11 +16,11 @@ const About = () => {
             <div className="m-4 md:m-14 w-11/12 md:w-6/12 text-white">
                 <div className="typewriter">
                     <div className="text-3xl md:text-6xl">
-                        <p className="font-Inter fontaty">Hello, I'm Gasser</p>
+                        <p className="font-Inter font-bold fontaty">Hello, I'm Gasser</p>
                     </div>
                 </div>
                 <div className="text-2xl md:text-5xl mt-1">
-                    <h3 className="font-Inter fontaty">I'm Front-end Developer</h3>
+                    <h3 className="font-Inter font-bold fontaty">I'm Front-end Developer</h3>
                 </div>
             </div>
             <div className="flex flex-col md:flex-row items-center ">
@@ -47,10 +47,8 @@ const About = () => {
                     />
                 </div>
             </div>
-            <div className="static overflow-hidden">
                 <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] -left-20 md:-left-40 top-40 md:top-80 z-[-1] bg-white bg-opacity-10 backdrop-blur-md rounded-full"></div>
                 <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] -bottom-36 md:-bottom-72 left-40 md:left-80 z-[-1] bg-white bg-opacity-10 backdrop-blur-md rounded-full"></div>
-            </div>
         </section>
     );
 };

@@ -57,4 +57,7 @@
 .fontaty{
     font-family: "Inter", serif;
 }
+.swiper-wrapper {
+    transition-timing-function: linear !important; /* or ease-in-out, cubic-bezier(...) */
+  }
   
