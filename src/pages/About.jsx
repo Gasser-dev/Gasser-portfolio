@@ -1,8 +1,8 @@
 import Header from "../layout/Header";
 import me from '@/assets/imgs/me.jpg'
 import '@/index.css'
-import useImagePreloader from "../components/UseImagePreloader";
-import LoadingPage from "../components/LoadingPage";
+import useImagePreloader from "../components/UseImagePreloader.jsx";
+import LoadingPage from "../components/LoadingPage.jsx";
 
 const About = () => {
     const { imagesPreloaded } = useImagePreloader([me]);
