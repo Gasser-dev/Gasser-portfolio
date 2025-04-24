@@ -1,7 +1,7 @@
 import Header from "../layout/Header";
 import me from '@/assets/imgs/me.jpg'
 import '@/index.css'
-
+import PreloadImage from 'react-preload-image'
 const About = () => {
     return (
         <section id="about" className="min-h-screen bg-gradient-236 from-white from-8.54 z-10 to-[#7D0000] relative to-70.28 overflow-x-hidden no-scrollbar max-h-[400px] overflow-y-auto lg:overflow-y-hidden
