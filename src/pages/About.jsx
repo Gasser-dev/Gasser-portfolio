@@ -40,15 +40,15 @@ const About = () => {
                     <p>✔️ Continuous learning and staying updated with the latest trends in web development.</p>
                 </div>
                 <div className="block rounded-full bg-[#AE0000] w-[250px] md:w-[400px] h-[250px] md:h-[400px] self-center relative">
-                    <img
-                        src={me}
-                        alt="profile"
+                    <PreloadImage
                         className="absolute top-4 left-4 w-full h-full object-cover rounded-full"
+                        src={me}
+                        lazy
                     />
                 </div>
             </div>
-                <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] -left-20 md:-left-40 top-40 md:top-80 z-[-1] bg-white bg-opacity-10 backdrop-blur-md rounded-full"></div>
-                <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] -bottom-36 md:-bottom-72 left-40 md:left-80 z-[-1] bg-white bg-opacity-10 backdrop-blur-md rounded-full"></div>
+            <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] -left-20 md:-left-40 top-40 md:top-80 z-[-1] bg-white bg-opacity-10 backdrop-blur-md rounded-full"></div>
+            <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] -bottom-36 md:-bottom-72 left-40 md:left-80 z-[-1] bg-white bg-opacity-10 backdrop-blur-md rounded-full"></div>
         </section>
     );
 };
