@@ -1,8 +1,10 @@
 import Header from "../layout/Header";
 import me from '@/assets/imgs/me.jpg'
 import '@/index.css'
-import PreloadImage from 'react-preload-image'
+import useImagePreloader from "../components/UseImagePreloader";
+
 const About = () => {
+    const { imagesPreloaded } = useImagePreloader([me]);
     return (
         <section id="about" className="min-h-screen bg-gradient-236 from-white from-8.54 z-10 to-[#7D0000] relative to-70.28 overflow-x-hidden no-scrollbar max-h-[400px] overflow-y-auto lg:overflow-y-hidden
   [&::-webkit-scrollbar]:w-2
@@ -40,11 +42,15 @@ const About = () => {
                     <p>✔️ Continuous learning and staying updated with the latest trends in web development.</p>
                 </div>
                 <div className="block rounded-full bg-[#AE0000] w-[250px] md:w-[400px] h-[250px] md:h-[400px] self-center relative">
-                    <PreloadImage
-                        className="absolute top-4 left-4 w-full h-full object-cover rounded-full"
-                        src={me}
-                        lazy
-                    />
+                    {imagesPreloaded ? (
+                        <img
+                            src={me}
+                            alt="Gasser - Front-end Developer"
+                            className="absolute top-4 left-4 w-full h-full object-cover rounded-full"
+                        />
+                    ) : (
+                        <div className="image-placeholder">Loading...</div>
+                    )}
                 </div>
             </div>
             <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] -left-20 md:-left-40 top-40 md:top-80 z-[-1] bg-white bg-opacity-10 backdrop-blur-md rounded-full"></div>
