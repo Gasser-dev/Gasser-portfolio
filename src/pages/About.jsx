@@ -2,6 +2,7 @@ import Header from "../layout/Header";
 import me from '@/assets/imgs/me.jpg'
 import '@/index.css'
 import useImagePreloader from "../components/UseImagePreloader";
+import LoadingPage from "../components/LoadingPage";
 
 const About = () => {
     const { imagesPreloaded } = useImagePreloader([me]);
@@ -49,7 +50,7 @@ const About = () => {
                             className="absolute top-4 left-4 w-full h-full object-cover rounded-full"
                         />
                     ) : (
-                        <div className="image-placeholder">Loading...</div>
+                        <LoadingPage/>
                     )}
                 </div>
             </div>
