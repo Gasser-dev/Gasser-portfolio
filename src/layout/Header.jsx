@@ -1,6 +1,7 @@
 
 import { FaCircleDown } from "react-icons/fa6";
 import SmallNav from "../components/SmallNav";
+import cv from "../assets/cv/CV.pdf";
 
 
 const Header = () => {
@@ -18,7 +19,7 @@ const Header = () => {
             {/* Download Button */}
             <div>
                 <a
-                    href="/path-to-your-cv.pdf"
+                    href={cv}
                     download
                     className="font-Inter font-bold text-lg border-2 flex items-center gap-3 border-white bg-white p-2 rounded-full hover:bg-transparent hover:text-white hover:border-white max-sm:text-sm"
                 >

@@ -57,13 +57,13 @@ const Skills = () => {
         {/* Skill Icons */}
         <InfiniteLogos/>
         {/* Skills bars */}
-        <ProgressBars ColorClass="bg-red-600" data-percentage={95} percentage={95} labelText="HTML" />
-        <ProgressBars ColorClass="bg-blue-500" data-percentage={85} percentage={85} labelText="CSS" />
-        <ProgressBars ColorClass="bg-yellow-500" data-percentage={90} percentage={90} labelText="JavaScript" />
-        <ProgressBars ColorClass="bg-blue-400" data-percentage={75} percentage={75} labelText="React" />
-        <ProgressBars ColorClass="bg-blue-700" data-percentage={60} percentage={60} labelText="TypeScript" />
-        <ProgressBars ColorClass="bg-gradient-to-r from-pink-400 to-red-500" data-percentage={50} percentage={50} labelText="UI/UX Design" />
-        <ProgressBars ColorClass="bg-orange-600" data-percentage={80} percentage={80} labelText="Logo Design" />
+        <ProgressBars ColorClass="bg-red-600" percentage={95} labelText="HTML" />
+        <ProgressBars ColorClass="bg-blue-500" percentage={85} labelText="CSS" />
+        <ProgressBars ColorClass="bg-yellow-500" percentage={90} labelText="JavaScript" />
+        <ProgressBars ColorClass="bg-blue-400" percentage={75} labelText="React" />
+        <ProgressBars ColorClass="bg-blue-700" percentage={60} labelText="TypeScript" />
+        <ProgressBars ColorClass="bg-gradient-to-r from-pink-400 to-red-500" percentage={50} labelText="UI/UX Design" />
+        <ProgressBars ColorClass="bg-orange-600" percentage={80} labelText="Logo Design" />
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import About from './pages/About.jsx'
+import About from './pages/About'
 import Skills from './pages/Skills'
 import gsap from 'gsap'; // <-- import GSAP
 import { useGSAP } from '@gsap/react'; // <-- import the hook from our React package
@@ -13,6 +13,14 @@ import SmallNav from './components/SmallNav';
 import Header from './layout/Header';
 gsap.registerPlugin(useGSAP);
 function App() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() =>{
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 7000);
+  },[])
+  
   return (
     <> {
       isLoading 
