@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import Footer from './layout/Footer';
 import SmallNav from './components/SmallNav';
 import Header from './layout/Header';
+import { ToastContainer } from 'react-toastify';
 gsap.registerPlugin(useGSAP);
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -35,6 +36,7 @@ function App() {
       <Footer/>
       </>
     }
+    <ToastContainer/>
     </>
 
   )

@@ -37,7 +37,7 @@ const ProjectsCards = ({ projectImg, link, title, language, description }) => {
 };
 
 const badge = {
-  badge: "p-1 border rounded-full w-20 flex justify-center items-center"
+  badge: "p-1 border text-sm rounded-full w-20 flex justify-center items-center"
 };
 
 export default ProjectsCards;
