@@ -2,14 +2,14 @@
 <!-- Intro  -->
 <h3 align="center">
         <samp>&gt; Hey There!, I am
-                <b><a target="_blank" href="https://alsiam.com">Gasser</a></b>
+                <b><a target="_blank" href="https://gassers-portfolio.netlify.app">Gasser</a></b>
         </samp>
 </h3>
 
 
 <p align="center"> 
   <samp>
-    「 I am a Front-End developer from <b>Bangladesh</b> 」
+    「 I am a Front-End developer from <b>Egypt</b> 」
     <br>
     <br>
   </samp>
