@@ -2,6 +2,7 @@ import React from 'react'
 import ProjectsCards from '../components/ProjectsCards'
 import { FaBriefcase } from 'react-icons/fa6'
 import aiBotBanner from '../assets/imgs/aiBotBanner.png';
+import becksInsure from '../assets/imgs/becksInsure.webp';
 
 const Projects = () => {
   return (
@@ -13,6 +14,13 @@ const Projects = () => {
         title="AI Bot"
         language={["HTML", "CSS", "Tailwind", "TypeScript", "GSAP", "Shadcn"]}
         description="An AI chatbot application built with modern web technologies"
+      />
+      <ProjectsCards
+        projectImg={becksInsure}
+        link="https://gasser1-project1.surge.sh"
+        title="Becks Insurance"
+        language={["HTML", "CSS"]}
+        description="A landing page responsive website for a fictional insurance company,it was My first project with css and html only"
       />
       <div className={`${blurDiv.blurDiv} -left-20 md:-left-40 -top-10 md:top-10`}></div>
       <div className={`${blurDiv.blurDiv} -right-20 md:-right-40 top-60 md:top-80`}></div>
