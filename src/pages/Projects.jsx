@@ -3,6 +3,7 @@ import ProjectsCards from '../components/ProjectsCards'
 import { FaBriefcase } from 'react-icons/fa6'
 import aiBotBanner from '../assets/imgs/aiBotBanner.png';
 import becksInsure from '../assets/imgs/becksInsure.webp';
+import brandEcommerce from '../assets/imgs/brandEcommerce.webp';
 
 const Projects = () => {
   return (
@@ -21,6 +22,13 @@ const Projects = () => {
         title="Becks Insurance"
         language={["HTML", "CSS"]}
         description="A landing page responsive website for a fictional insurance company,it was My first project with css and html only"
+      />
+      <ProjectsCards
+        projectImg={brandEcommerce}
+        link="https://e-commerce-gasser-devs-projects.vercel.app"
+        title="Brand E-commerce"
+        language={["HTML", "CSS", "JavaScript", "React", "Redux", "React Router", "React Icons"]}
+        description="A responsive e-commerce website for a fictional brand, built with modern web technologies"
       />
       <div className={`${blurDiv.blurDiv} -left-20 md:-left-40 -top-10 md:top-10`}></div>
       <div className={`${blurDiv.blurDiv} -right-20 md:-right-40 top-60 md:top-80`}></div>
