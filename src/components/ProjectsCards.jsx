@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProjectsCards = ({ projectImg, link, title, language, description }) => {
   return (
-    <div className="relative flex flex-col lg:w-2/3 md:flex-row md:gap-5 md:items-center justify-between items-start bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg">
+    <div className="project-card relative flex flex-col lg:w-2/3 md:flex-row md:gap-5 md:items-center justify-between items-start bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg">
       {/* Project Image */}
       <div className="w-full md:w-1/2 h-48 bg-gray-300 rounded-2xl mb-4 md:mb-0 flex items-center justify-center overflow-hidden">
         <img src={projectImg} alt="Project preview" className="w-full h-full object-cover" />
@@ -37,7 +37,7 @@ const ProjectsCards = ({ projectImg, link, title, language, description }) => {
 };
 
 const badge = {
-  badge: "p-1 border text-sm rounded-full w-20 flex justify-center items-center"
+  badge: "p-2 border text-sm rounded-full w-fit flex justify-center items-center"
 };
 
 export default ProjectsCards;

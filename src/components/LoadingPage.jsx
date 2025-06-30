@@ -18,7 +18,7 @@ const LoadingPage = () => {
 
     return (
         <>
-            <div className="fixed inset-0 z-50 bg-black/70 flex justify-center items-center gap-3">
+            <div className="fixed inset-0 z-50 bg-black flex justify-center items-center gap-3">
                 <div id="square1" className="w-12 h-12 border-4 border-red-400"></div>
                 <div id='textContainer' className="flex justify-center items-center w-auto">
                     <p id="text" className="text-white whitespace-nowrap">Welcome to my Portfolio 😇</p>

@@ -4,8 +4,72 @@ import { FaBriefcase } from 'react-icons/fa6'
 import aiBotBanner from '../assets/imgs/aiBotBanner.png';
 import becksInsure from '../assets/imgs/becksInsure.webp';
 import brandEcommerce from '../assets/imgs/brandEcommerce.webp';
+import { useEffect } from 'react';
+import { gsap, ScrollTrigger } from'gsap/all';
 
 const Projects = () => {
+    useEffect(() => {
+  // Ensure GSAP plugins are registered
+  gsap.registerPlugin(ScrollTrigger);
+    
+  // Create a GSAP context for cleanup
+  const ctx = gsap.context(() => {
+    // Wait for the next tick to ensure DOM is ready
+    setTimeout(() => {
+      const projectsSection = document.querySelector("#projects");
+      if (!projectsSection) {
+        console.warn("#projects element not found");
+        return;
+      }
+
+      const cards = gsap.utils.toArray(".project-card");
+      if (!cards.length) {
+        console.warn("No project cards found");
+        return;
+      }
+
+      // Animate title
+      gsap.from("#projects h1", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "#projects",
+          start: "top 90%",
+          toggleActions: "play none none none",
+        }
+      });
+
+      // Animate cards
+      cards.forEach((card, index) => {
+        gsap.fromTo(card, 
+          { 
+            opacity: 0, 
+            x: -100,
+            immediateRender: false 
+          },
+          { 
+            opacity: 1, 
+            x: 0, 
+            duration: 0.8,
+            delay: index * 0.15,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 50%",
+              end: "top 20%",
+              toggleActions: "play none none none",
+              
+            }
+          }
+        );
+      });
+    }, 0);
+  });
+
+  return () => ctx.revert();
+}, []);
   return (
     <section id='projects' className='min-h-fit gap-12 px-3 py-10 flex flex-wrap items-center flex-col bg-[#861616] relative overflow-hidden z-[1]'>
       <h1 className='text-4xl font-bold flex gap-4 text-white'><FaBriefcase />Projects</h1>

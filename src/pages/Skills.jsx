@@ -9,7 +9,6 @@ import InfiniteLogos from '../components/InfiniteLogos';
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
-  console.log("skills rendered")
   useGSAP(() => {
     gsap.utils.toArray(".icon").forEach((icon) => {
       gsap.fromTo(

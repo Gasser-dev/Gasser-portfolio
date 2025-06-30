@@ -14,28 +14,15 @@ import Header from './layout/Header';
 import { ToastContainer } from 'react-toastify';
 gsap.registerPlugin(useGSAP);
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
 
-  useEffect(() =>{
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 7000);
-  },[])
-  
   return (
-    <> {
-      isLoading 
-      ?
-      <LoadingPage/>
-      :
-      <>
+    <> 
+      
       <About />
       <Skills />
       <Projects/>
       <Contact/>
       <Footer/>
-      </>
-    }
     <ToastContainer/>
     </>
 
