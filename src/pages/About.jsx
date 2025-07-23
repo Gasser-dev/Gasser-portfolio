@@ -3,9 +3,37 @@ import me from '@/assets/imgs/me.jpg'
 import '@/index.css'
 import useImagePreloader from "../components/UseImagePreloader.jsx";
 import LoadingPage from "../components/LoadingPage.jsx";
-
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 const About = () => {
     const { imagesPreloaded } = useImagePreloader([me]);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  // Animation variants
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.16, 0.77, 0.47, 0.97],
+      },
+    },
+  };
     return (
         <section id="about" className="min-h-screen bg-gradient-236 from-white from-8.54 z-10 to-[#7D0000] relative to-70.28 overflow-x-hidden no-scrollbar max-h-[400px] overflow-y-auto lg:overflow-y-hidden
   [&::-webkit-scrollbar]:w-2
@@ -27,24 +55,31 @@ const About = () => {
                 </div>
             </div>
             <div className="flex flex-col md:flex-row items-center ">
-                <div className="text-white text-base md:text-xl ml-3 md:ml-5 flex flex-col ">
-                    <p>Hello! I’m a passionate Front-End Developer</p>
-                    <p>dedicated to creating dynamic, user-friendly web applications.</p>
-                    <p># I specialize in crafting responsive designs</p>
-                    <p>and seamless user experiences.</p>
-                    <p># With a strong eye for detail and a commitment to clean, efficient code,</p>
-                    <p>I love transforming ideas into interactive digital experiences.</p>
-                    <p>Whether building from scratch or improving existing projects,</p>
-                    <p># my focus is always on delivering solutions</p>
-                    <p>that are both visually appealing and highly functional.</p>
-                    <p>✔️ Strong problem-solving and debugging skills.</p>
-                    <p>✔️ Attention to detail and a keen eye for UI/UX improvements.</p>
-                    <p>✔️ Effective communication and teamwork in agile environments.</p>
-                    <p>✔️ Continuous learning and staying updated with the latest trends in web development.</p>
-                </div>
-                <div className="block rounded-full bg-[#AE0000] w-[250px] md:w-[400px] h-[250px] md:h-[400px] self-center relative">
+    <motion.div
+      ref={ref}
+      className="text-white text-base md:text-xl ml-3 md:ml-5 flex flex-col"
+      variants={container}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+    >
+      <motion.p variants={item}>Hello! I'm a passionate Front-End Developer</motion.p>
+      <motion.p variants={item}>dedicated to creating dynamic, user-friendly web applications.</motion.p>
+      <motion.p variants={item}># I specialize in crafting responsive designs</motion.p>
+      <motion.p variants={item}>and seamless user experiences.</motion.p>
+      <motion.p variants={item}># With a strong eye for detail and a commitment to clean, efficient code,</motion.p>
+      <motion.p variants={item}>I love transforming ideas into interactive digital experiences.</motion.p>
+      <motion.p variants={item}>Whether building from scratch or improving existing projects,</motion.p>
+      <motion.p variants={item}># my focus is always on delivering solutions</motion.p>
+      <motion.p variants={item}>that are both visually appealing and highly functional.</motion.p>
+      <motion.p variants={item}>✔️ Strong problem-solving and debugging skills.</motion.p>
+      <motion.p variants={item}>✔️ Attention to detail and a keen eye for UI/UX improvements.</motion.p>
+      <motion.p variants={item}>✔️ Effective communication and teamwork in agile environments.</motion.p>
+      <motion.p variants={item}>✔️ Continuous learning and staying updated with the latest trends in web development.</motion.p>
+    </motion.div>
+                <motion.div initial={{x: 200}} animate={{x: 0}} transition={{duration: 1}} className="block rounded-full bg-[#AE0000] w-[250px] md:w-[400px] h-[250px] md:h-[400px] self-center relative">
+
                     {imagesPreloaded ? (
-                        <img
+                        <motion.img
                             src={me}
                             alt="Gasser - Front-end Developer"
                             className="absolute top-4 left-4 w-full h-full object-cover rounded-full"
@@ -52,7 +87,7 @@ const About = () => {
                     ) : (
                         <LoadingPage/>
                     )}
-                </div>
+                </motion.div>
             </div>
             <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] -left-20 md:-left-40 top-40 md:top-80 z-[-1] bg-white bg-opacity-10 backdrop-blur-md rounded-full"></div>
             <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] -bottom-36 md:-bottom-72 left-40 md:left-80 z-[-1] bg-white bg-opacity-10 backdrop-blur-md rounded-full"></div>
