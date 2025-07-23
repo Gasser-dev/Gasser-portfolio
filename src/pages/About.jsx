@@ -79,7 +79,7 @@ const About = () => {
                 <motion.div initial={{x: 200}} animate={{x: 0}} transition={{duration: 1}} className="block rounded-full bg-[#AE0000] w-[250px] md:w-[400px] h-[250px] md:h-[400px] self-center relative">
 
                     {imagesPreloaded ? (
-                        <motion.img
+                        <img
                             src={me}
                             alt="Gasser - Front-end Developer"
                             className="absolute top-4 left-4 w-full h-full object-cover rounded-full"
